@@ -1,9 +1,32 @@
 import React from 'react'
-
+import gandhi from '../Assets/gandhi.png'
+import bgImg from '../Assets/orangeBg.png'
 const Banner = () => {
+
+
+  
+
+
+
   return (
     <section id="banner">
-        
+        <div className="container">
+          <div className="row">
+            <div className="col-6 text_side">
+              <h3>Top Placements with <span> FAANG and Fortune 500 </span>Companies</h3>
+              <p>Go from diagrams, wireframes and prototypes without switching apps or updating across platforms.</p>
+            </div>
+            <div className="col-6 card_side">
+            {/* <img className='bgImg' src={bgImg} alt="" /> */}
+              <div className="card">
+                  <img src={gandhi} alt="" />
+                  <div className="about">
+                  <p>Utkarsh Kumar</p> <span>LPU Alumni, Class of 2007</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
   )
 }

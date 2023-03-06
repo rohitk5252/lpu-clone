@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <> 
     <header id="header" className='header'>
-    <div className="container">
+    <div className="container"> 
             <div className="logo_part">
                     <a href="/"><img src={logo} alt="" /></a>
             </div>
@@ -30,13 +30,12 @@ const Header = () => {
     <div className='header2'>
         <div className="container">
         <ul className='navigation2'>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Admissions</a></li>
-                    <li><a href="">Acedemics</a></li>
-                    <li><a href="">Research</a></li>
-                    <li><a className='active' href="">Placements</a></li>
-                    <li><a href="">Campus Life</a></li>
-                    <li><a href="">Disciplines</a></li>
+                    <li><a className='active'  href="">Highlights</a></li>
+                    <li><a href="">Placement Statistics</a></li>
+                    <li><a href="">Placement Support</a></li>
+                    <li><a href="">Our Alumni</a></li>
+                    <li><a href="">Industry Partnerships</a></li>
+                    <li><a href="">FAQs</a></li>
                 </ul>
         </div>
     </div>
