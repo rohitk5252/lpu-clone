@@ -905,20 +905,20 @@ table.table tr th {
   margin-bottom: 30px;
 }
 
-#speak .card .buttons {
+#speak  .buttons {
   display: flex;
   gap: 30px;
 }
 
 
-#speak .card .buttons button i {
+#speak .buttons button i {
   font-size: 20px;
   margin: 10px;
   background: linear-gradient(to right, #F37335 0%, #FDC830 100%);
   background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-#speak .card .buttons button {
+#speak .buttons button {
   background-color: var(--color-white-light);
   border: 2px solid transparent;
   background: linear-gradient(white, white) padding-box,
@@ -926,9 +926,55 @@ table.table tr th {
   border-radius: 50%;
 }
 
-#divers .card {
-    background-color: var(--color-white-light);
+#diversity .card {
+  position: relative;
+  min-height: 365px;
+  background-color: var(--color-white-light);
   border: 2px solid transparent;
+  border-radius: 12px;
   background: linear-gradient(white, white) padding-box,
   linear-gradient(to right, #F37335, #FDC830) border-box;
 }
+
+#diversity .card .text_side {
+  margin: 20px;
+}
+
+#diversity .card .text_side p{
+  text-align: start;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  background: linear-gradient(90deg, #F37335 -0.36%, #FDC830 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+ }
+
+ #diversity .card .text_side span {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #585858;
+  font-style: italic;
+ }
+
+ #diversity button i {
+  font-size: 20px;
+  margin: 10px;
+  background: linear-gradient(to right, #F37335 0%, #FDC830 100%);
+  background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#diversity  button {
+  background-color: var(--color-white-light);
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(to right, #F37335, #FDC830) border-box;
+  border-radius: 50%;
+}
+

@@ -8,35 +8,45 @@ const Diversity = () => {
   return (
     <section id="diversity">
         <div className="container">
-            <div className="row">
-                <div className="col-3 card">
+            <div className="row flexrow">
+                    <button className="prevCard"><i class="fa-solid fa-arrow-left"></i></button>
+                <div className="col-3">
+                    <div className="card">
                     <img src={divers1} alt="" />
                     <div className="text_side">
                         <p>Students' diversity and interaction with Industry experts shaped my career at LPU</p>
-                        <span>Karan Mittal CSE</span>
+                        <span>Karan Mittal • CSE</span>
+                    </div>
                     </div>
                 </div>
-                <div className="col-3 card">
+                <div className="col-3">
+                    <div className="card">
                     <img src={divers2} alt="" />
                     <div className="text_side">
                         <p>State of the art infrastructure and experienced faculty nurtured my aspirations</p>
-                        <span>Tanya Arora CSE</span>
+                        <span>Tanya Arora • CSE</span>
+                    </div>
                     </div>
                 </div>
-                <div className="col-3 card">
+                <div className="col-3">
+                    <div className="card">
                     <img src={divers3} alt="" />
                     <div className="text_side">
                         <p>Hands-on experience, state of the art lab facilities gave me practical exposure</p>
-                        <span>Satyam Kumar Mech</span>
+                        <span>Satyam Kumar • Mech</span>
+                    </div>
                     </div>
                 </div>
-                <div className="col-3 card">
+                <div className="col-3">
+                    <div className="card">
                     <img src={divers4} alt="" />
                     <div className="text_side">
-                        <p>Research, entrepreneurship and campus recruitment opportunities all at one place</p>
-                        <span>Ayush Sharma MCA</span>
+                        <p>Research, entrpenership and campus recruitment opportunities all at one place</p>
+                        <span>Ayush Sharma • MCA</span>
                     </div>
                 </div>
+                    </div> 
+                    <button className="nextCard"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </div>
     </section>
