@@ -1,3 +1,14 @@
+@keyframes showHide {
+  0% {
+    opacity: 0;
+    /* transform: translateX(-2%); */
+  }
+  100% {
+    /* transform: translateX(0%); */
+    opacity: 1;
+  }
+}
+
 :root {
   --color-blueLight-bg:#F4FAFD;
   --color-primary-orange: #EE7D00;
@@ -98,7 +109,7 @@ body {
 }
 
 section {
-  padding: 100px 0;
+  padding: 80px 0;
 }
 /* ------------------------ */
 .text_center {
@@ -163,7 +174,6 @@ img {
   width: 100%;
 }
 
-
 .Btn {
   font-size: 14px;
   outline: none;
@@ -175,7 +185,6 @@ img {
   border: 1px solid transparent;
   color:var(--color-primary-blue);
 }
-
 .Btn--primary {
   border-color: var(--color-primary-orange);
   background: var(--color-primary-orange);
@@ -317,7 +326,20 @@ ul.navigation2 a:hover, ul.navigation2 a.active {
 
 
 /* banner  */
-
+#banner {
+  padding: 65px 0;
+  position: relative;
+}
+#banner::after {
+  position: absolute;
+  content: "";
+  top:0;
+  right: 0;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(90deg, #F37335 -0.36%, #FDC830 100%);
+  opacity: 0.05;
+}
 #banner .card  {
   display: inline-block;
   background-color: var(--color-white-light);
@@ -330,18 +352,22 @@ ul.navigation2 a:hover, ul.navigation2 a.active {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
   padding: 20px;
 }
+#banner .container {
+  position: relative;
+  z-index: 1;
+}
 
-.card .about {
+#banner .card .about {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.card p {
+#banner .card p {
   font-weight: 500;
   font-size: 18px;
   line-height: 180%;
 }
-.card span {
+#banner .card span {
   color: #585858;
   font-weight: 300;
   font-size: 14px;
@@ -438,7 +464,6 @@ ul.navigation2 a:hover, ul.navigation2 a.active {
   font-size: 18px;
   font-weight: 500;
   color: var(--color-primary-blue);
-  padding: 10px;
   position: relative;
   font-weight: 500;
   font-size: 16px;
@@ -447,19 +472,29 @@ ul.navigation2 a:hover, ul.navigation2 a.active {
 }
 
 .accoridan_head {
-  font-size: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #121112;
 }
 
 .accordian_body {
-  /* padding: 10px; */
   height: 0px;
   overflow: hidden;
-  /* display: none; */
+  font-weight: 400;
+font-size: 13px;
+line-height: 180%;
+/* or 23px */
+
+
+/* Style */
+
+color: #585858;
 }
 .fa-chevron-down {
   position: absolute;
   color: #585858;
-  font-size: 20px;
+  font-size: 15px;
   right: 0;
   top: 10%;
   transition: 0.5s;
@@ -483,7 +518,9 @@ ul.navigation2 a:hover, ul.navigation2 a.active {
 #companies {
   background: linear-gradient(90deg, #f3743516 -0.36%, #fdc63019 100%);
 /* opacity: 0.05; */
+padding-bottom: 0;
 }
+
 
 
 #companies .text_side  h3{
@@ -491,7 +528,8 @@ ul.navigation2 a:hover, ul.navigation2 a.active {
   font-size: 32px;
   line-height: 130%;
 }
-#companies .image_side img {
+
+#companies .image_side iframe {
   border: 1px solid transparent;
   background: linear-gradient(white, white) padding-box,
   linear-gradient(to right, #F37335, #FDC830) border-box;
@@ -500,20 +538,19 @@ ul.navigation2 a:hover, ul.navigation2 a.active {
 
 #companies .row.stats {
   margin-top: 100px;
-  /* padding: 60px 20px; */
   background-color: #343434;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  box-shadow: 0 0 0 100vmax #343434;
+  clip-path: inset(0 -100vmax);
+  min-height: 225px ;
+  padding-top: 50px 0;
 }
 #companies .row.stats .col-2 {
-  padding: 60px 20px;
-  /* padding: 0px 20px; */
-  /* display: flex; */
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
 }
+
 #companies .row.stats .col-2 h3{
   font-weight: 400;
   font-size: 40px;
@@ -529,7 +566,10 @@ ul.navigation2 a:hover, ul.navigation2 a.active {
   background-color: #fff;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between;  
+  box-shadow: 0 0 0 100vmax #fff;
+  clip-path: inset(0 -100vmax);
+
 }
 #companies .comps div {
   padding: 0;
@@ -569,6 +609,7 @@ ul.navigation2 a:hover, ul.navigation2 a.active {
   background: linear-gradient(white, white) padding-box,
   linear-gradient(to right, #F37335, #FDC830) border-box;
   border-radius: 10px;
+  margin-bottom: 35px;
 }
 
 #records .row.stats {
@@ -587,13 +628,80 @@ ul.navigation2 a:hover, ul.navigation2 a.active {
   font-size: 40px;
   line-height: 130%; 
 }
-/*  dreams */
+
+#records ul.tab {
+  display: flex;
+  /* align-self: center; */
+  /* justify-content: flex-start; */
+  gap: 30px;
+  border-bottom: 1px solid #bcafaf;
+}
+#records ul.tab li a{
+  display: flex;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s;
+}
+#records ul.tab li {
+  border-bottom: 2px solid transparent;
+  transition: all 1s;
+}
+#records ul.tab li.active {
+  transition: all 1s;
+  border-color: #F37335;
+}
+#records ul.tab .active {
+  background: linear-gradient(to right, #F37335 0%, #FDC830 100%);
+  background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#records .tabs {
+  padding: 30px 0;
+}
+#records .tabb.active {
+  animation: showHide 1s linear 0s 1 forwards;
+  display: block;
+}
+
+#records .tabb {
+  opacity: 0;
+  display: none;
+  transition: all 0.5s;
+}
+#records table {
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+}
+
+table.table tr td {
+  padding: 20px 15px;
+  border-bottom: 1px solid #908181;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+table.table tr th {
+  background-color: #222;
+  color: #fff;
+  padding: 15px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+}
+
+*  dreams */
 
 #dreams {
   background-color: #DDDDDD;
 }
 #dreams .heading_part {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 #dreams .ctc {
   height: 100%;
@@ -615,9 +723,9 @@ ul.navigation2 a:hover, ul.navigation2 a.active {
   padding: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  margin-top: 10px;
-  
+  margin-top: 30px;
 }
+
  #dreams .active {
   /* border: 1px solid transparent; */
   background: linear-gradient(white, white) padding-box,
@@ -656,3 +764,171 @@ ul.navigation2 a:hover, ul.navigation2 a.active {
   height: 20px;
   margin-top: 14px;
  }
+
+/* Shining */
+#shining {
+  background: rgba(246, 242, 236, 0.5)
+}
+
+ #shining .card {
+  margin-top: 40px;
+  min-height: 425px;
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(to right, #F37335, #FDC830) border-box;
+  border-radius: 10px;
+  padding: 20px;
+ }
+
+ #shining .card img {
+  border-radius: 10px;
+ }
+
+ #shining .card h3 {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #121112;
+ }
+
+ #shining .card p{
+  text-align: justify;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #585858;
+ }
+
+ /* focused */
+
+ #focused nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+ 
+#focused ul.tab {
+  display: flex;
+  /* align-self: center; */
+  /* justify-content: flex-start; */
+  gap: 30px;
+  border-bottom: 1px solid #bcafaf;
+}
+#focused ul.tab li a{
+  display: flex;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s;
+}
+#focused ul.tab li {
+  border-bottom: 2px solid transparent;
+  transition: all 1s;
+}
+#focused ul.tab li.active {
+  transition: all 1s;
+  border-color: #000000;
+}
+
+#focused .tabs .card {
+  display: flex;
+  align-items: center;
+  gap: 80px ;
+  margin-top: 40px;
+}
+#focused .tabs .card img {
+  border-radius: 10px;
+}
+
+#focused .card h3{
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 130%;
+  margin-bottom: 30px;
+}
+
+#focused .tabs .ftab {
+  display: none;
+}
+#focused .tabs .ftab.active {
+  animation: showHide 1s linear 0s 1 forwards;
+  display: block;
+}
+
+
+
+
+/* Speak */
+
+#speak {
+  background-color: #FBFBFB;;
+}
+#speak .heading_part {
+  text-align: center;
+  margin-bottom: 50px;
+}
+#speak .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 200px;
+}
+
+#speak .card img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+#speak .card h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 180%;
+  color: #121112;
+}
+#speak .card span{
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 25px;
+  font-style: italic;
+ }
+
+#speak .card p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 180%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#speak .card .buttons {
+  display: flex;
+  gap: 30px;
+}
+
+
+#speak .card .buttons button i {
+  font-size: 20px;
+  margin: 10px;
+  background: linear-gradient(to right, #F37335 0%, #FDC830 100%);
+  background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#speak .card .buttons button {
+  background-color: var(--color-white-light);
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(to right, #F37335, #FDC830) border-box;
+  border-radius: 50%;
+}
+
+#divers .card {
+    background-color: var(--color-white-light);
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(to right, #F37335, #FDC830) border-box;
+}

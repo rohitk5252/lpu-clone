@@ -11,7 +11,7 @@ const Banner = () => {
   return (
     <section id="banner">
         <div className="container">
-          <div className="row">
+          <div className="row flexrow">
             <div className="col-6 text_side">
               <h3>Top Placements with <span> FAANG and Fortune 500 </span>Companies</h3>
               <p>Go from diagrams, wireframes and prototypes without switching apps or updating across platforms.</p>

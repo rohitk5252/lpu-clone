@@ -1,5 +1,5 @@
 import React from "react";
-import googleimg from "../Assets/googel.png";
+// import googleimg from "../Assets/googel.png";
 import c1 from "../Assets/22.png";
 import c2 from "../Assets/23.png";
 import c3 from "../Assets/24.png";
@@ -14,22 +14,19 @@ const Companies = () => {
   return (
     <section id="companies">
       <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="row">
+            <div className="row flexrow">
               <div className="col-6 text_side">
                 <h3>
-                  See how LPU students prepare and bag <span>Rs. 1 Cr.</span> placements at
+                  See how LPU students prepare and bag <span>Rs. 1 Cr.</span> placements at 
                  <span>Top companies!</span> 
                 </h3>
                 <p>LPU students are guided on niche technologies ind emand. Possessing such skill sets separates them from the ordinary and leads them to grab top placements around the world!</p>
               </div>
               <div className="col-6 image_side">
-                <img src={googleimg} alt="" />
+              <iframe width="400" height="215" src="https://www.youtube.com/embed/uxv6fu8angU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
             </div>
-          </div>
-        </div>
+        
         <div className="row stats">
               <div className="col-2">
                 <h3>

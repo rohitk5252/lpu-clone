@@ -31,7 +31,7 @@ const Ecosyctem = () => {
           <div className="col-6 wrapper">
             <div className="accordian">
               <div
-                onC={(e) => handleAccord(e.target.id)}
+                onClick={(e) => handleAccord(e.target.id)}
                 className="accoridan_head active"
                 id="accord1"
               >
@@ -46,7 +46,7 @@ const Ecosyctem = () => {
             </div>
             <div className="accordian">
               <div
-                onC={(e) => handleAccord(e.target.id)}
+                onClick={(e) => handleAccord(e.target.id)}
                 className="accoridan_head"
                 id="accord2"
               >
@@ -60,7 +60,7 @@ const Ecosyctem = () => {
             </div>
             <div className="accordian">
               <div
-                onC={(e) => handleAccord(e.target.id)}
+                onClick={(e) => handleAccord(e.target.id)}
                 className="accoridan_head"
                 id="accord3"
               >
@@ -74,7 +74,7 @@ const Ecosyctem = () => {
             </div>
             <div className="accordian">
               <div
-                onC={(e) => handleAccord(e.target.id)}
+                onClick={(e) => handleAccord(e.target.id)}
                 className="accoridan_head"
                 id="accord4"
               >
@@ -88,7 +88,7 @@ const Ecosyctem = () => {
             </div>
             <div className="accordian">
               <div
-                onC={(e) => handleAccord(e.target.id)}
+                onClick={(e) => handleAccord(e.target.id)}
                 className="accoridan_head"
                 id="accord5"
               >
