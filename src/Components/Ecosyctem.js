@@ -6,8 +6,11 @@ const Ecosyctem = () => {
     const AllAccordHead = document.getElementsByClassName("accoridan_head");
     const currHead = document.getElementById(id);
     //  console.log( AllAccordHead)
-    for (const key in AllAccordHead) {
-      console.log(key);
+    for (var i=0; i<4; i++) {
+      if(AllAccordHead[i].id !== id){
+        AllAccordHead[i].classList.remove("open")
+        AllAccordHead[i].parentElement.classList.remove("bgWhite");
+      }
     }
     currHead.classList.toggle("open");
     currHead.parentElement.classList.toggle("bgWhite");

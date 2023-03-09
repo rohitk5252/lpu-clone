@@ -23,7 +23,7 @@ const Companies = () => {
                 <p>LPU students are guided on niche technologies ind emand. Possessing such skill sets separates them from the ordinary and leads them to grab top placements around the world!</p>
               </div>
               <div className="col-6 image_side">
-              <iframe width="400" height="215" src="https://www.youtube.com/embed/uxv6fu8angU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe width="500" height="315" src="https://www.youtube.com/embed/uxv6fu8angU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
             </div>
         
