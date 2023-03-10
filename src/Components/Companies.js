@@ -9,8 +9,32 @@ import c6 from "../Assets/28.png";
 import c7 from "../Assets/29.png";
 import c8 from "../Assets/30.png";
 import c9 from "../Assets/31.png";
+import Carousel from "./Carousel";
+  
+
 
 const Companies = () => {
+  const items = [
+    <img src={c1} alt="" />,
+    <img src={c2} alt="" />,
+    <img src={c3} alt="" />,
+    <img src={c4} alt="" />,
+    <img src={c5} alt="" />,
+    <img src={c6} alt="" />,
+    <img src={c7} alt="" />,
+    <img src={c8} alt="" />,
+    <img src={c9} alt="" />,
+    <img src={c1} alt="" />,
+    <img src={c2} alt="" />,
+    <img src={c3} alt="" />,
+    <img src={c4} alt="" />,
+    <img src={c5} alt="" />,
+    <img src={c6} alt="" />,
+    <img src={c7} alt="" />,
+    <img src={c8} alt="" />,
+    <img src={c9} alt="" />,
+  ];
+
   return (
     <section id="companies">
       <div className="container">
@@ -64,15 +88,7 @@ Stipend per month</p>
               </div>
             </div>
             <div className="row comps">
-              <div className="col-1"><img src={c1} alt="" /></div>
-              <div className="col-1"><img src={c2} alt="" /></div>
-              <div className="col-1"><img src={c3} alt="" /></div>
-              <div className="col-1"><img src={c4} alt="" /></div>
-              <div className="col-1"><img src={c5} alt="" /></div>
-              <div className="col-1"><img src={c6} alt="" /></div>
-              <div className="col-1"><img src={c7} alt="" /></div>
-              <div className="col-1"><img src={c8} alt="" /></div>
-              <div className="col-1"><img src={c9} alt="" /></div>
+              <Carousel items={items} mob={3} tab={5} lap={9} infinite={true}/>
             </div>
       </div>
     </section>

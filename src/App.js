@@ -1,4 +1,5 @@
 import Banner from './Components/Banner';
+import Carousel from './Components/Carousel';
 import Companies from './Components/Companies';
 import Diversity from './Components/Diversity';
 import Dream from './Components/Dream';

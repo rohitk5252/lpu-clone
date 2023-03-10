@@ -721,7 +721,7 @@ table.table tr th {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  margin: 0 -8px;
+  margin: 0 10px;
   padding: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
@@ -773,6 +773,7 @@ table.table tr th {
 }
 
  #shining .card {
+  /* position: relative; */
   margin-top: 40px;
   min-height: 425px;
   border: 2px solid transparent;
@@ -783,6 +784,9 @@ table.table tr th {
  }
 
  #shining .card img {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
   border-radius: 10px;
  }
 
@@ -909,6 +913,8 @@ table.table tr th {
 
 #speak  .buttons {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 30px;
 }
 
@@ -935,6 +941,7 @@ table.table tr th {
 }
 
 #diversity .card {
+  margin: 0 10px;
   position: relative;
   min-height: 365px;
   background-color: var(--color-white-light);
@@ -1100,4 +1107,50 @@ table.table tr th {
 #faq  .accoridan_headf.open i {
   rotate: -50deg;
   transition: 0.4s;
+}
+
+.alice-carousel__dots {
+  display: none;
+}
+ #speak p.alice-carousel__next-btn-item {
+  position: absolute;
+  bottom: -40px;
+  left : 52%;
+  opacity: 0;
+  /* display: none; */
+}
+
+
+#speak p.alice-carousel__prev-btn-item {
+  position: absolute;
+  bottom: -40px;
+  left : 46%;
+  opacity: 0;
+}
+
+#diversity p.alice-carousel__prev-btn-item {
+  position: absolute;
+  top: 46%;
+  left : -34px;
+  opacity: 0;
+}
+
+#diversity p.alice-carousel__next-btn-item {
+  position: absolute;
+  top: 46%;
+  right : -34px;
+  opacity: 0;
+}
+
+#companies p.alice-carousel__prev-btn-item, #companies p.alice-carousel__next-btn-item , #banner p.alice-carousel__prev-btn-item, #banner p.alice-carousel__next-btn-item  {
+  display: none;
+}
+
+#banner .arrow {
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  width: 20px;
+  opacity: 0;
+transform: rotateZ(-90deg)
 }
